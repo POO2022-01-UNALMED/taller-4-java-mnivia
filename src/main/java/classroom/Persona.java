@@ -2,13 +2,17 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
+    long cedula;//static......
     String nombre;
     static int totalPersonas;
     
     static {
         totalPersonas = 0;
-        cedula = 3;
+        //cedula = 3;
+    }
+    
+    Persona(){				//Creacion de constructor vacio --------
+    	totalPersonas++;
     }
 
     Persona(long cedula, String nombre) {
@@ -31,6 +35,7 @@ public class Persona {
 
     Persona(String nombre) {
         this.nombre = "";
+        this.cedula=1;
         totalPersonas++;
     }
     
